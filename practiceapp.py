@@ -1,13 +1,15 @@
-
+from pathlib import Path
 import streamlit as st
 import pandas as pd
 import joblib
 
 st.set_page_config(page_title="Smart Premimum Loan",layout="wide")
 
+MODEL_PATH = Path(__file__).parent / "smartpremimum_pipeline.joblib"
+
 @st.cache_resource
 def load_pipeline():
-    return joblib.load("/content/smartpremimum_pipeline.joblib")
+    return joblib.load(MODEL_PATH)
 
 final_pipeline = load_pipeline()
 
