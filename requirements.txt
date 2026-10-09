@@ -1,3 +1,4 @@
+streamlit
 Python== 3.13.16 
 scikit-learn==1.6.1
 XGBoost== 3.4.1
